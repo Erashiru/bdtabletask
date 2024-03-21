@@ -15,6 +15,9 @@ const (
 )
 
 func main() {
+	if len(os.Args[1:]) < 0 {
+		return
+	}
 	pages := os.Args[1:]
 
 	db, err := models.New(storagePath)
